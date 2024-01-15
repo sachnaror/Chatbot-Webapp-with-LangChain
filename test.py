@@ -68,8 +68,7 @@ title_template = PromptTemplate(
 )
 script_template = PromptTemplate(
 	input_variables = ['title', 'wikipedia_research'],
-	template='''Give me an attractive youtube video script based on the title {title}
-	while making use of the information and knowledge obtained from the Wikipedia research:{wikipedia_research}'''
+	template='''Give me an attractive youtube video script based on the title Vector database while making use of the information and knowledge obtained from the Wikipedia research:{wikipedia_research}'''
 )
 
 
@@ -108,13 +107,13 @@ title_template = PromptTemplate(
 
 script_template = PromptTemplate(
 	input_variables = ['title', 'wikipedia_research'],
-	template='''Give me an attractive youtube video script based on the title {title}
+	template='''Give me an attractive youtube video script based on the LLM model in AI
 	while making use of the information and knowledge obtained from the Wikipedia research:{wikipedia_research}'''
 )
 
 
 from langchain.memory import ConversationBufferMemory
-# We use the ConversationBufferMemory to can be used to store a history of the conversation between the user and the language model.
+# Using the ConversationBufferMemory to can be used to store a history of the conversation between the user and the language model.
 # This information can be used to improve the language model's understanding of the user's intent, and to generate more relevant and coherent responses.
 
 memoryT = ConversationBufferMemory(input_key='concept', memory_key='chat_history')
